@@ -11,4 +11,4 @@ def twoSum(nums, target: int):
             if index != hashMap[search]:
                 return [index, hashMap[search]]
 
-twoSum([5,5,5,5,5,5], 10)
+twoSum([1,2,3,4,6,5], 10)
