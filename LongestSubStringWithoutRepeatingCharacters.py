@@ -7,7 +7,6 @@ def lengthOfLongestSubstring(s):
         currentString = ''
         longest = 0
         
-        
         for i in s:
             if i in currentString:
                 if len(currentString) > longest:
