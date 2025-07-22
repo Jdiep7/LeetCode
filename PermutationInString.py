@@ -1,23 +1,25 @@
 from collections import Counter
+from collections import defaultdict
+
 
 def checkInclusion(s1, s2):
-    left = 0
-    right = 0
-    iterator = 0
+    s1List = Counter(list(s1))
+    l = 0
+    fmap = Counter()
     
-    while iterator < len(s2):
-        if s2[iterator] in s1:
-            left = iterator
-            right = iterator
- 
+    for r in range(len(s2)):
+        if s2[r] in s1:
+            fmap[s2[r]] += 1
             
-            iterator = right   
-            used = []
-        iterator += 1    
-       
-            
+        if r - l > len(s1)-1:
+            if s2[l] in s1:
+                fmap[s2[l]] -= 1
+            l += 1
+         
+        if fmap == s1List:
+            return True 
     return False
 
-print(checkInclusion("hello", "ooolleoooleh"))
+print(checkInclusion("ab", "eidboaoo"))
             
             
