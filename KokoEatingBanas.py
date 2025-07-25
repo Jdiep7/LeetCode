@@ -13,7 +13,7 @@ def minEatingSpeed(piles, h):
         if  hours <= h:
             res = k
             right = k-1
-        else:
+        else:   
             left = k+1
 
     return res
