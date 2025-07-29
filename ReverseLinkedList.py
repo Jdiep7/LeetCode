@@ -10,7 +10,8 @@ def reverseList(head):
         currentNode.next = prev
         prev = currentNode
         currentNode = next_node
-        
+    
+    
     
     return head
         
