@@ -22,4 +22,5 @@ def lengthOfLongestSubstring(s):
              
 
 
-print(lengthOfLongestSubstring(''))
+        
+
